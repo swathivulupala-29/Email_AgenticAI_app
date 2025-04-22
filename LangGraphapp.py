@@ -17,6 +17,7 @@ NEWS_API_KEY = st.secrets["general"]["NEWS_API_KEY"]
 APP_URL = st.secrets["general"]["STREAMLIT_APP_URL"]
 ENV = st.secrets["general"].get("STREAMLIT_ENV", "development")
 API_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
+SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
 
 
 # Debug info
