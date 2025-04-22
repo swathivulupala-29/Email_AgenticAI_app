@@ -94,7 +94,7 @@ if 'credentials' not in st.session_state:
         <div style="text-align:center;">
             <a href="{authorization_url}" target="_self">
                 <button style="padding: 0.75em 1.5em; font-size: 1rem; background-color: #0b8043; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                    🔐 Click here to authorize Google Calendar
+                    Click here to authorize Google Calendar
                 </button>
             </a>
         </div>
@@ -122,7 +122,7 @@ events_result = service.events().list(
 
 events = events_result.get('items', [])
 
-st.subheader("📅 Today's & Tomorrow's Events")
+st.subheader("Today's & Tomorrow's Events")
 event_texts = []
 for event in events:
     try:
@@ -160,12 +160,12 @@ def summarize_with_langgraph(texts: List[str]) -> str:
 
 # Show LangGraph summary of events
 if event_texts:
-    st.subheader("✨ Calendar Summary")
+    st.subheader("Calendar Summary")
     event_summary = summarize_with_langgraph(event_texts)
     st.write(event_summary)
 
 # Show top US news
-st.subheader("📰 Today's Top News")
+st.subheader("Today's Top News")
 news_url = f"https://newsapi.org/v2/top-headlines?country=us&apiKey={NEWS_API_KEY}"
 response = requests.get(news_url)
 news_data = response.json()
@@ -182,7 +182,7 @@ else:
 
 # LangGraph workflow for news summary
 if news_texts:
-    st.subheader("🧠 News Summary")
+    st.subheader("News Summary")
     news_summary = summarize_with_langgraph(news_texts)
     st.write(news_summary)
 
