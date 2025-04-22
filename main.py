@@ -21,6 +21,7 @@ with open('credentials.json') as f:
 
 redirect_uri = credentials_data['web']['redirect_uris'][0]
 NEWS_API_KEY = credentials_data.get('NEWS_API_KEY', '')
+SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
 WEATHER_API_KEY = credentials_data.get('WEATHER_API_KEY', '')
 
 # Initialize Streamlit
