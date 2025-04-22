@@ -20,7 +20,6 @@ with open('credentials.json') as f:
     credentials_data = json.load(f)
 
 redirect_uri = credentials_data['web']['redirect_uris'][0]
-SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
 NEWS_API_KEY = credentials_data.get('NEWS_API_KEY', '')
 WEATHER_API_KEY = credentials_data.get('WEATHER_API_KEY', '')
 
